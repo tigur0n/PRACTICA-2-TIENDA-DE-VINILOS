@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRACK 01 // Indie & Noise Records</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="cabecera__barra">
+            <a href="#" class="logo">TRACK 01 <span>//</span></a>
+            <button id="btn-menu" class="boton-menu" aria-label="Abrir menú">&#9776;</button>
+        </div>
+
+        <nav id="menu" class="menu-navegacion">
+            <a href="#novedades">Novedades</a>
+            <a href="#reediciones">Reediciones</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#eventos">Eventos</a>
+        </nav>
+    </header>
+    <main>
+        <section id="novedades" class="slideshow">
+            <div class="slideshow__pantalla">
+                <img src="https://unsplash.com" alt="Pixies - Doolittle Reissue" class="slide">
+                <img src="https://unsplash.com" alt="Nirvana - Nevermind Deluxe" class="slide">
+                <img src="https://unsplash.com" alt="Sonic Youth - Daydream Nation" class="slide">
+            </div>
+            <div class="slideshow__controles">
+            <button class="boton-slide" id="anterior" aria-label="Anterior">&larr;</button>
+            <div class="slideshow__contador" id="contador">0 / 0</div>
+            <button class="boton-slide" id="siguiente" aria-label="Siguiente">&rarr;</button>
+        </div>
+        </section>
+    </main>
+
+    <script src="https://jquery.com"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
