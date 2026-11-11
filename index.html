@@ -3,40 +3,635 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRACK 01 // Indie & Noise Records</title>
+    <title>TRACK 02 RECORDS // Indie & Noise</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+    <!-- Cabecera -->
     <header class="cabecera">
         <div class="cabecera__barra">
-            <a href="#" class="logo">TRACK 01 <span>//</span></a>
-            <button id="btn-menu" class="boton-menu" aria-label="Abrir menú">&#9776;</button>
-        </div>
+            <a href="#" class="logo">TRACK 02 RECORDS</a>
+            
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#novedades-seccion">Novedades</a>
+                <a href="#reediciones-seccion">Reediciones</a>
+                <a href="#catalogo-seccion">Catálogo</a>
+                <a href="#eventos-seccion">Eventos</a>
+                <a href="#contacto-seccion">Contacto</a>
+            </nav>
 
-        <nav id="menu" class="menu-navegacion">
-            <a href="#novedades">Novedades</a>
-            <a href="#reediciones">Reediciones</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#eventos">Eventos</a>
-        </nav>
+            <div class="cabecera__iconos">
+                <div class="carrito-icono">
+                    🛒 <div class="carrito-alerta">!</div>
+                </div>
+                <button class="menu-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
+
+    <!-- Panel de carrito -->
+    <div class="carrito-panel">
+        <div class="carrito-panel__cabecera">
+            <h3>Tu Carrito</h3>
+            <button id="cerrar-carrito">&times;</button>
+        </div>
+        <div class="carrito-panel__lista">
+            <p class="carrito-vacio">El carrito está vacío</p>
+        </div>
+        <div class="carrito-panel__pie">
+            <div class="total-caja">
+                <span>TOTAL:</span>
+                <span class="total-precio">0.00 €</span>
+            </div>
+            <button class="boton-comprar">Proceder al pago</button>
+        </div>
+    </div>
+
     <main>
-        <section id="novedades" class="slideshow">
+        <!-- Carrusel secciones -->
+        <section id="inicio" class="slideshow">
             <div class="slideshow__pantalla">
-                <img src="https://unsplash.com" alt="Pixies - Doolittle Reissue" class="slide">
-                <img src="https://unsplash.com" alt="Nirvana - Nevermind Deluxe" class="slide">
-                <img src="https://unsplash.com" alt="Sonic Youth - Daydream Nation" class="slide">
+                <div class="slide">
+                    <img src="img/slide1.jpg" alt="Queen en Vivo">
+                    <a href="#novedades-seccion" class="slide__enlace">Ver Novedades</a>
+                </div>
+                <div class="slide">
+                    <img src="img/slide2.jpg" alt="Gorillaz Especial">
+                    <a href="#reediciones-seccion" class="slide__enlace">Ver Reediciones</a>
+                </div>
+                <div class="slide">
+                    <img src="img/slide3.jpg" alt="The Strokes Colección">
+                    <a href="#catalogo-seccion" class="slide__enlace">Ver Catálogo</a>
+                </div>
+                <div class="slide">
+                    <img src="img/slide4.jpg" alt="Foo Fighters Directo">
+                    <a href="#eventos-seccion" class="slide__enlace">Ver Agenda</a>
+                </div>
             </div>
             <div class="slideshow__controles">
-            <button class="boton-slide" id="anterior" aria-label="Anterior">&larr;</button>
-            <div class="slideshow__contador" id="contador">0 / 0</div>
-            <button class="boton-slide" id="siguiente" aria-label="Siguiente">&rarr;</button>
+                <button class="boton-slide boton-slide--ant">&larr;</button>
+                <div class="slideshow__contador">1 / 4</div>
+                <button class="boton-slide boton-slide--sig">&rarr;</button>
+            </div>
+        </section>
+
+        <!-- Novedades de la tienda -->
+            <section id="novedades-seccion" class="ancla-compensada">
+        <div class="seccion-titulo">
+            <h2>LO NUEVO DE LA SEMANA</h2>
+            <p>Las últimas novedades que nos acaban de entrar a la tienda directamente en vinilo.</p>
         </div>
+
+        <div class="catalogo-grid">
+            <article class="tarjeta-disco">
+                <div class="tarjeta-disco__marco">
+                    <img src="img/novedad1.jpg" alt="Billie Eilish">
+                </div>
+                <div class="tarjeta-disco__info">
+                    <h3>Billie Eilish</h3>
+                    <p class="album">Hit Me Hard and Soft</p>
+                    <p class="precio">32.00 €</p>
+                    <button class="btn-agregar">Añadir</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-disco">
+                <div class="tarjeta-disco__marco">
+                    <img src="img/novedad2.jpg" alt="Childish Gambino">
+                </div>
+                <div class="tarjeta-disco__info">
+                    <h3>Childish Gambino</h3>
+                    <p class="album">"Awaken, My Love!"</p>
+                    <p class="precio">29.50 €</p>
+                    <button class="btn-agregar">Añadir</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-disco">
+                <div class="tarjeta-disco__marco">
+                    <img src="img/novedad3.jpg" alt="Queen">
+                </div>
+                <div class="tarjeta-disco__info">
+                    <h3>Queen</h3>
+                    <p class="album">The Miracle</p>
+                    <p class="precio">34.00 €</p>
+                    <button class="btn-agregar">Añadir</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-disco">
+                <div class="tarjeta-disco__marco">
+                    <img src="img/novedad4.jpg" alt="The Police">
+                </div>
+                <div class="tarjeta-disco__info">
+                    <h3>The Police</h3>
+                    <p class="album">Synchronicity (Edición Azul)</p>
+                    <p class="precio">31.20 €</p>
+                    <button class="btn-agregar">Añadir</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+        <!-- Reediciones con colores -->
+        <section id="reediciones-seccion" class="ancla-compensada">
+            <div class="seccion-titulo">
+                <h2>REEDICIONES EN COLOR</h2>
+                <p>Discos clásicos editados en prensajes exclusivos de color y vinilos especiales.</p>
+            </div>
+            <div class="reediciones-galeria">
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion1.jpg" alt="TV Girl"></div>
+                    <div class="reedicion-caja__texto"><h4>TV Girl // Who Really Cares</h4><p>Vinilo Rosa y Azul - 29.99 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="TV Girl - Who Really Cares" data-precio="29.99">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion2.jpg" alt="Ramones"></div>
+                    <div class="reedicion-caja__texto"><h4>Ramones // Ramones</h4><p>Edición Estándar - 27.50 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="Ramones - Ramones" data-precio="27.50">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion3.jpg" alt="Blondie"></div>
+                    <div class="reedicion-caja__texto"><h4>Blondie // Call Me</h4><p>Edición Limitada Rosa - 26.00 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="Blondie - Call Me" data-precio="26.00">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion4.jpg" alt="House of Heroes"></div>
+                    <div class="reedicion-caja__texto"><h4>House of Heroes // The Knock-Down</h4><p>Vinilo Blanco Opaco - 28.95 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="House of Heroes - KnockDown" data-precio="28.95">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion5.jpg" alt="The Clash"></div>
+                    <div class="reedicion-caja__texto"><h4>The Clash // London Calling</h4><p>Prensaje Doble Pesado - 36.50 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="The Clash - London Calling" data-precio="36.50">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion6.jpg" alt="Kendrick Lamar"></div>
+                    <div class="reedicion-caja__texto"><h4>Kendrick Lamar // To Pimp a Butterfly</h4><p>Edición B&N - 33.00 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="Kendrick Lamar - TPAB" data-precio="33.00">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion7.jpg" alt="Gorillaz"></div>
+                    <div class="reedicion-caja__texto"><h4>Gorillaz // Souk Eye</h4><p>The Now Now Vinyl - 30.00 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="Gorillaz - Souk Eye" data-precio="30.00">Añadir</button>
+                </div>
+                <div class="reedicion-caja">
+                    <div class="reedicion-caja__marco"><img src="img/reedicion8.jpg" alt="Patti Smith"></div>
+                    <div class="reedicion-caja__texto"><h4>Patti Smith // Horses</h4><p>Prensaje 180 gramos - 28.00 €</p></div>
+                    <button class="btn-agregar btn-agregar--mini" data-disco="Patti Smith - Horses" data-precio="28.00">Añadir</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo -->
+        <section id="catalogo-seccion" class="ancla-compensada">
+                        <div class="seccion-titulo">
+                <h2>TODO EL CATÁLOGO</h2>
+                <p>Nuestra selección de discos esenciales listos para enviar o recoger en tienda.</p>
+            </div>
+            
+                    <!-- Filtros de catálogo -->
+        <div class="filtros-contenedor">
+            <div class="filtros-fila">
+                <input type="text" id="buscador-disco" placeholder="Buscar artista o álbum..." class="filtro-input">
+                
+                <div class="filtros-categorias">
+                    <button type="button" class="btn-filtro activo" data-categoria="todos">Todos</button>
+                    <button type="button" class="btn-filtro" data-categoria="rock">Rock & Indie</button>
+                    <button type="button" class="btn-filtro" data-categoria="espanol">En Español</button>
+                    <button type="button" class="btn-filtro" data-categoria="metal">Metal & Punk</button>
+                    <button type="button" class="btn-filtro" data-categoria="pop">Pop & Soul</button>
+                </div>
+            </div>
+
+            <div class="filtro-precio-caja">
+                <label for="rango-precio-texto">Rango de precio: <strong id="rango-precio-texto">20 € - 45 €</strong></label>
+                <div id="slider-precio"></div>
+            </div>
+        </div>
+
+            <div class="catalogo-grid">
+                <article class="tarjeta-disco">
+                    <div class="tarjeta-disco__marco"><img src="img/disco1.jpg" alt="Tyler The Creator"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Tyler, the Creator</h3><p class="album">IGOR</p><p class="precio">32.50 €</p>
+                        <button class="btn-agregar" data-disco="Tyler - IGOR" data-precio="32.50">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco">
+                    <div class="tarjeta-disco__marco"><img src="img/disco2.jpg" alt="Earthsuit"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Earthsuit</h3><p class="album">Kaleidoscope Superior</p><p class="precio">29.99 €</p>
+                        <button class="btn-agregar" data-disco="Earthsuit - Kaleidoscope" data-precio="29.99">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco">
+                    <div class="tarjeta-disco__marco"><img src="img/disco3.jpg" alt="Radiohead"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Radiohead</h3><p class="album">OK Computer</p><p class="precio">31.00 €</p>
+                        <button class="btn-agregar" data-disco="Radiohead - OK Computer" data-precio="31.00">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco">
+                    <div class="tarjeta-disco__marco"><img src="img/disco4.jpg" alt="Rage Against the Machine"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Rage Against the Machine</h3><p class="album">Rage Against the Machine</p><p class="precio">33.50 €</p>
+                        <button class="btn-agregar" data-disco="RATM - Self Titled" data-precio="33.50">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco">
+                    <div class="tarjeta-disco__marco"><img src="img/disco5.jpg" alt="Lenny Kravitz"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Lenny Kravitz</h3><p class="album">Mama Said</p><p class="precio">27.90 €</p>
+                        <button class="btn-agregar" data-disco="Lenny Kravitz - Mama Said" data-precio="27.90">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco">
+                    <div class="tarjeta-disco__marco"><img src="img/disco6.jpg" alt="The Strokes"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>The Strokes</h3><p class="album">Is This It</p><p class="precio">30.00 €</p>
+                        <button class="btn-agregar" data-disco="The Strokes - Is This It" data-precio="30.00">Añadir</button>
+                    </div>
+                </article>
+
+                <!-- Discos ocultos al inicio -->
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco7.jpg" alt="The Doors"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>The Doors</h3><p class="album">The Best of The Doors</p><p class="precio">29.00 €</p>
+                        <button class="btn-agregar" data-disco="The Doors - Best Of" data-precio="29.00">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco8.jpg" alt="Michael Jackson"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Michael Jackson</h3><p class="album">Bad</p><p class="precio">35.00 €</p>
+                        <button class="btn-agregar" data-disco="Michael Jackson - Bad" data-precio="35.00">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco9.jpg" alt="Chevelle"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Chevelle</h3><p class="album">Wonder What's Next</p><p class="precio">28.50 €</p>
+                        <button class="btn-agregar" data-disco="Chevelle - Wonder Whats" data-precio="28.50">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco10.jpg" alt="Fugees"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Fugees</h3><p class="album">Greatest Hits</p><p class="precio">32.00 €</p>
+                        <button class="btn-agregar" data-disco="Fugees - Greatest Hits" data-precio="32.00">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco11.jpg" alt="The Who"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>The Who</h3><p class="album">Who's Next</p><p class="precio">30.50 €</p>
+                        <button class="btn-agregar" data-disco="The Who - Whos Next" data-precio="30.50">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco12.jpg" alt="Pink Floyd"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Pink Floyd</h3><p class="album">Wish You Were Here</p><p class="precio">38.00 €</p>
+                        <button class="btn-agregar" data-disco="Pink Floyd - WYWH" data-precio="38.00">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco13.jpg" alt="Nirvana"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Nirvana</h3><p class="album">Bleach</p><p class="precio">31.00 €</p>
+                        <button class="btn-agregar" data-disco="Nirvana - Bleach" data-precio="31.00">Añadir</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco14.jpg" alt="Soda Stereo"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Soda Stereo</h3><p class="album">Doble Vida</p><p class="precio">32.90 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco15.jpg" alt="Stereomud"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Stereomud</h3><p class="album">Stereotype Be</p><p class="precio">27.50 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco16.jpg" alt="The Velvet Underground"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>The Velvet Underground</h3><p class="album">& Nico</p><p class="precio">34.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco17.jpg" alt="Five Iron Frenzy"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Five Iron Frenzy</h3><p class="album">The End Is Near</p><p class="precio">29.99 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco18.jpg" alt="Gustavo Cerati"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Gustavo Cerati</h3><p class="album">Bocanada</p><p class="precio">33.50 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco19.jpg" alt="Queen"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Queen</h3><p class="album">A Kind of Magic</p><p class="precio">35.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco20.jpg" alt="Judas Priest"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Judas Priest</h3><p class="album">Screaming for Vengeance</p><p class="precio">31.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco21.jpg" alt="Camilo Sesto"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Camilo Sesto</h3><p class="album">Sentimientos</p><p class="precio">26.90 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco22.jpg" alt="Joan Manuel Serrat"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Joan Manuel Serrat</h3><p class="album">Mediterráneo</p><p class="precio">28.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco23.jpg" alt="Systema Solar"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Systema Solar</h3><p class="album">La Revancha del Burro</p><p class="precio">32.50 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco24.jpg" alt="Aterciopelados"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Aterciopelados</h3><p class="album">El Dorado</p><p class="precio">30.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco25.jpg" alt="1280 Almas"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>1280 Almas</h3><p class="album">La 22</p><p class="precio">29.95 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco26.jpg" alt="Sixpence None The Richer"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Sixpence None The Richer</h3><p class="album">Sixpence None The Richer</p><p class="precio">31.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco27.jpg" alt="The Clash"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>The Clash</h3><p class="album">Combat Rock</p><p class="precio">29.50 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+                <article class="tarjeta-disco tarjeta-disco--oculto">
+                    <div class="tarjeta-disco__marco"><img src="img/disco28.jpg" alt="Queen"></div>
+                    <div class="tarjeta-disco__info">
+                        <h3>Queen</h3><p class="album">News of the World</p><p class="precio">34.00 €</p>
+                        <button class="btn-agregar">Añadir</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="catalogo-control">
+                <button id="btn-ver-mas" class="btn-secundario">Ver más productos</button>
+            </div>
+        </section>
+
+        <!-- Formulario para pagar en línea -->
+       <section id="caja-pago-seccion" class="pago-seccion">
+    <div class="pago-contenedor">
+        <div class="pago-cabecera">
+            <h2>Finalizar Pedido</h2>
+            <button id="cancelar-pago">&times;</button>
+        </div>
+        <form id="pago-formulario" class="pago-formulario">
+            <div class="pago-grupo">
+                <label for="pago-nombre">Nombre Completo</label>
+                <input type="text" id="pago-nombre" name="nombre" placeholder="Juanita Ramírez" required autocomplete="name">
+            </div>
+
+            <div class="pago-grupo">
+                <label for="pago-email">Correo Electrónico</label>
+                <input type="email" id="pago-email" name="email" placeholder="juanita@example.com" required autocomplete="email">
+            </div>
+
+            <div class="pago-grupo">
+                <label for="pago-direccion">Dirección de Envío</label>
+                <input type="text" id="pago-direccion" name="direccion" placeholder="Calle de Barceló, 15, Madrid" required autocomplete="street-address">
+            </div>
+
+            <div class="pago-grupo">
+                <label for="pago-metodo">Método de Pago</label>
+                <select id="pago-metodo" name="metodo" required>
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="tarjeta">💳 Tarjeta de Crédito / Débito</option>
+                    <option value="paypal">🅿 PayPal</option>
+                    <option value="bizum">📱 Bizum</option>
+                </select>
+            </div>
+
+            <div class="pago-resumen">
+                <span>Total a abonar:</span>
+                <span id="pago-total-cifra" class="pago-total-cifra">0.00 €</span>
+            </div>
+
+            <button type="submit" class="boton-comprar">Confirmar y pagar pedido</button>
+        </form>
+            </div>
+        </section>
+
+                <!-- Registro a eventos -->
+        <section id="registro-evento-seccion" class="pago-seccion" style="display: none;">
+            <div class="pago-contenedor">
+                <div class="pago-cabecera" style="background-color: var(--color-acento);">
+                    <h2>Reserva de Invitación</h2>
+                    <button id="cancelar-registro-evento" style="background: none; border: none; color: var(--texto-blanco); font-size: 28px; cursor: pointer;">&times;</button>
+                </div>
+                <form id="formulario-registro-evento" class="pago-formulario">
+                    <div class="pago-grupo">
+                        <label>Evento Seleccionado</label>
+                        <input type="text" id="evento-seleccionado-nombre" readonly style="background-color: var(--color-borde); font-weight: bold; color: var(--texto-suave);">
+                    </div>
+                    <div class="pago-grupo">
+                        <label for="registro-nombre">Nombre del Asistente</label>
+                        <input type="text" id="registro-nombre" required placeholder="Tu nombre completo">
+                    </div>
+                    <div class="pago-grupo">
+                        <label for="registro-email">Correo Electrónico</label>
+                        <input type="email" id="registro-email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="pago-grupo">
+                        <label for="registro-pases">Número de Invitaciones</label>
+                        <select id="registro-pases" required>
+                            <option value="1">1 Invitación individual</option>
+                            <option value="2">2 Invitaciones (Máximo por persona)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="boton-comprar" style="background-color: var(--color-acento); color: var(--texto-blanco);">Confirmar Reserva Gratis</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Texto en cinta -->
+        <div class="cinta-marquee">
+            <div class="cinta-marquee__interior">
+                <span>✦ EDICIONES ESPECIALES DE BLONDIE Y THE STROKES ✦ PRÓXIMOS EVENTOS ACÚSTICOS EN LA TIENDA DE MADRID ✦ VINILOS EXCLUSIVOS ✦</span>
+                <span>✦ EDICIONES ESPECIALES DE BLONDIE Y THE STROKES ✦ PRÓXIMOS EVENTOS ACÚSTICOS EN LA TIENDA DE MADRID ✦ VINILOS EXCLUSIVOS ✦</span>
+            </div>
+        </div>
+
+            <section id="eventos-seccion" class="ancla-compensada">
+        <div class="seccion-titulo" data-aos="fade-up">
+            <h2>PRÓXIMAS FECHAS</h2>
+            <p>Eventos, charlas y audiciones musicales en nuestro espacio de Madrid.</p>
+        </div>
+        <div class="acordeon">
+            <div class="acordeon__item" data-aos="fade-right" data-aos-delay="300">
+                <button class="acordeon__titulo">Especial David Bowie & Red Hot Chili Peppers</button>
+                <div class="acordeon__contenido">
+                    <div class="evento-bloque">
+                        <p>Charla abierta para analizar las líneas de bajo funk-rock y los cambios estéticos del vinilo a lo largo de los años.</p>
+                        <span class="evento-fecha">📅 Jueves 19 de Noviembre - 19:30h</span>
+                        <button class="btn-evento" type="button">Reservar Invitación</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acordeon__item" data-aos="fade-right" data-aos-delay="600">
+                <button class="acordeon__titulo">Audición Monográfica: Radiohead & Chevelle</button>
+                <div class="acordeon__contenido">
+                    <div class="evento-bloque">
+                        <p>Ven a escuchar algunas rarezas alternativas en alta fidelidad junto a otros coleccionistas.</p>
+                        <span class="evento-fecha">📅 Sábado 21 de Noviembre - 18:00h</span>
+                        <button class="btn-evento" type="button">Reservar Invitación</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acordeon__item" data-aos="fade-right" data-aos-delay="900">
+                <button class="acordeon__titulo">Noche de Vinilos: Especial Queen & Michael Jackson</button>
+                <div class="acordeon__contenido">
+                    <div class="evento-bloque">
+                        <p>Un repaso sonoro por las producciones de audio más famosas del pop y del rock, escuchando sus mezclas originales en tocadiscos.</p>
+                        <span class="evento-fecha">📅 Miércoles 25 de Noviembre - 20:00h</span>
+                        <button class="btn-evento" type="button">Reservar Invitación</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acordeon__item" data-aos="fade-right" data-aos-delay="1200">
+                <button class="acordeon__titulo">Fórum sobre Portadas: De Ramones a Gorillaz</button>
+                <div class="acordeon__contenido">
+                    <div class="evento-bloque">
+                        <p>Debate libre sobre el arte en las portadas de los discos, desde el punk directo hasta los designs de bandas virtuales.</p>
+                        <span class="evento-fecha">📅 Viernes 27 de Noviembre - 19:00h</span>
+                        <button class="btn-evento" type="button">Reservar Invitación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!--Sección contacto-->
+        <section id="contacto-seccion" class="ancla-compensada">
+    
+    <div class="seccion-titulo">
+    <h2>CONTACTO Y TIENDA FÍSICA</h2>
+    <p>Escribe aquí tu texto descriptivo para la sección de contacto.</p>
+</div>
+        <div class="contacto-contenedor" style="display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; margin: 0;">
+                    <div class="contacto-contenedor" style="display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; margin: 0 10px;">
+                <!-- Carrusel Fotos de la tienda -->
+                <div class="slideshow-tienda" style="position: relative; width: 100%; height: 260px; background-color: #000000; overflow: hidden; border-radius: 4px;">
+                    <div class="slideshow-tienda__pantalla" style="width: 100%; height: 100%; position: relative;">
+                        
+                        <div class="slide-tienda" style="position: absolute; width: 100%; height: 100%; display: block;">
+                            <img src="img/tienda1.jpg" alt="Interior de Track 02 Records" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <div class="slide-tienda" style="position: absolute; width: 100%; height: 100%; display: none;">
+                            <img src="img/tienda2.jpg" alt="Estanterías de vinilos" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <div class="slide-tienda" style="position: absolute; width: 100%; height: 100%; display: none;">
+                            <img src="img/tienda3.jpg" alt="Detalle de vinilos exclusivos" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <!-- Flechas del carrusel inferior -->
+                    <div class="slideshow-tienda__controles" style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); padding: 4px 10px; border-radius: 20px; display: flex; gap: 10px; z-index: 5;">
+                        <button class="btn-tienda-ant" style="background: none; border: none; color: #FFFFFF; cursor: pointer; font-size: 12px;">&larr;</button>
+                        <div class="slideshow-tienda__contador" style="color: #FFFFFF; font-size: 11px; font-weight: bold; min-width: 30px; text-align: center;">1 / 3</div>
+                        <button class="btn-tienda-sig" style="background: none; border: none; color: #FFFFFF; cursor: pointer; font-size: 12px;">&rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Datos de contacto -->
+                <div class="contacto-info" style="padding: 10px;">
+                    <h3>TRACK 02 RECORDS</h3>
+                    <p>📍 Calle de Barceló, 15, Centro, 28004 Madrid, España</p>
+                    <p>📞 +34 910 123 456</p>
+                    <p>✉ hola@track02records.com</p>
+                    <p class="horario" style="margin-top: 10px; font-weight: bold; color: var(--color-acento);">🕒 Lunes a Sábado: 11:00h - 20:30h // Domingos cerrado.</p>
+                </div>
+            </div>
         </section>
     </main>
-
-    <script src="https://jquery.com"></script>
-    <script src="js/main.js"></script>
+        <!-- Confirmar compra vinilo -->
+    <section id="modal-confirmar-disco" class="pago-seccion" style="display: none;">
+        <div class="pago-contenedor" style="max-width: 460px; text-align: center;">
+            <div class="pago-cabecera">
+                <h2>Añadir al Carrito</h2>
+                <button id="cerrar-modal-disco" type="button" style="background: none; border: none; color: #FFFFFF; font-size: 28px; cursor: pointer;">×</button>
+            </div>
+            <div style="padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <img id="modal-disco-img" src="" alt="Carátula" style="width: 240px; height: 240px; object-fit: cover; border-radius: 6px; box-shadow: 0 12px 24px rgba(0,0,0,0.25);">
+                <div>
+                    <h3 id="modal-disco-titulo" style="font-size: 18px; font-weight: 900; color: var(--color-texto);">Título</h3>
+                    <p id="modal-disco-album" style="font-size: 13px; color: var(--texto-suave);">Álbum</p>
+                    <p id="modal-disco-precio" style="font-size: 16px; font-weight: 900; color: var(--color-acento); margin-top: 5px;">0.00 €</p>
+                </div>
+                <p style="font-size: 13px; color: var(--color-texto);">¿Quieres añadir este vinilo a tu cesta de compra?</p>
+                <div style="display: flex; gap: 10px; width: 100%; margin-top: 5px;">
+                    <button id="btn-cancelar-disco" type="button" class="btn-secundario" style="flex: 1; padding: 10px;">Cancelar</button>
+                    <button id="btn-confirmar-disco" type="button" class="btn-agregar" style="flex: 1; padding: 12px; font-size: 13px;">Sí, Añadir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pie">
+    <p>© 2026 TRACK 01 // UDIT Práctica Diseño Web Avanzado. Hecho por Juanita Ramírez.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
